@@ -1,5 +1,6 @@
 <h1>Add an Employee</h1>
-<form>
+<a [routerLink]="['/home']">Home</a>
+<form #addEmployeeForm="ngForm" (ngSubmit)="submitNewEmployee(addEmployeeForm)">
   <label for="name">Name</label>
   <input
     type="text"
