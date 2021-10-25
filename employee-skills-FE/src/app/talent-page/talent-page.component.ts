@@ -12,7 +12,9 @@ export class TalentPageComponent implements OnInit {
   constructor(private service: EmployeesService) {}
 
   ngOnInit(): void {
-    this.getEmployees();
+    if ((this.employees = [])) {
+      this.getEmployees();
+    }
   }
 
   getEmployees = () => {

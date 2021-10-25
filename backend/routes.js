@@ -10,15 +10,36 @@ routes.get("/employees", (req, res) => {
   });
 });
 
-routes.get("/employees", (req, res) => {
-  let query = `SELECT * FROM employees`;
+// routes.get("/employees", (req, res) => {
+//   let query = `SELECT * FROM employees`;
+//   pool.query(query).then((response) => {
+//     res.json(response.rows);
+//   });
+// });
+
+routes.get("/employees/skill", (req, res) => {
+  let query = `select * from employees where skill = '${req.query.keyword}'`;
   pool.query(query).then((response) => {
     res.json(response.rows);
   });
 });
 
-routes.get("/employees", (req, res) => {
-  let query = `select * from employees where id = ${req.query.id}`;
+routes.get("/employees/name", (req, res) => {
+  let query = `select * from employees where name = '${req.query.keyword}'`;
+  pool.query(query).then((response) => {
+    res.json(response.rows);
+  });
+});
+
+routes.get("/employees/id", (req, res) => {
+  let query = `select * from employees where id = ${req.query.keyword}`;
+  pool.query(query).then((response) => {
+    res.json(response.rows);
+  });
+});
+
+routes.get("/employees/exp", (req, res) => {
+  let query = `select * from employees where exp >= ${req.query.keyword}`;
   pool.query(query).then((response) => {
     res.json(response.rows);
   });

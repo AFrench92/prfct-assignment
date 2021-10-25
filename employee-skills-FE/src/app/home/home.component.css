@@ -1,0 +1,30 @@
+.container {
+  background-color: black;
+  height: 100vh;
+}
+.header {
+  color: red;
+  text-align: center;
+  padding: 25px;
+}
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  background-color: silver;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  width: 50%;
+}
+
+.nav-link {
+  text-decoration: none;
+  height: 50px;
+  width: 200px;
+  background-color: tomato;
+  color: black;
+  text-align: center;
+  padding-top: 10px;
+}

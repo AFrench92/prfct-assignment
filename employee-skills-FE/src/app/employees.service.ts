@@ -16,6 +16,22 @@ export class EmployeesService {
     return this.http.get(`${this.baseUrl}/employees`);
   };
 
+  getEmployeesId = (id): any => {
+    return this.http.get(`${this.baseUrl}/employees/id?keyword=${id}`);
+  };
+
+  getEmployeesSkill = (skill): any => {
+    return this.http.get(`${this.baseUrl}/employees/skill?keyword=${skill}`);
+  };
+
+  getEmployeesExp = (exp): any => {
+    return this.http.get(`${this.baseUrl}/employees/exp?keyword=${exp}`);
+  };
+
+  getEmployeesName = (name): any => {
+    return this.http.get(`${this.baseUrl}/employees/name?keyword=${name}`);
+  };
+
   postEmployee = (employee: Employee) => {
     return this.http.post(`${this.baseUrl}/employees`, employee);
   };
@@ -32,5 +48,10 @@ export class EmployeesService {
     this.postEmployee(employee).subscribe(() => {
       this.router.navigate(['/talent-page']);
     });
+  };
+
+  searchId = (form: NgForm) => {
+    // console.log(form.value);
+    this.getEmployeesId(form.value.id);
   };
 }

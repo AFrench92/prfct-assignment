@@ -1,17 +1,30 @@
 <h1>Find an Employee</h1>
 <a [routerLink]="['/home']">Home</a>
-<form>
+<button (click)="getEmployees()">View all Employees</button>
+<button (click)="clearSearch()">Clear Search</button>
+<form #idSearchForm="ngForm" (ngSubmit)="submitIdSearch(idSearchForm)">
+  <label for="id">Search by ID</label>
+  <input
+    type="text"
+    id="id"
+    name="id"
+    placeholder="Enter the Employees ID number"
+    ngModel
+  />
+  <button>Search</button>
+</form>
+<form #nameSearchForm="ngForm" (ngSubmit)="submitNameSearch(nameSearchForm)">
   <label for="name">Search by Name</label>
   <input
     type="text"
     id="name"
     name="name"
-    placeholder="Enter the Employees name"
+    placeholder="Enter the Employees Name"
     ngModel
   />
   <button>Search</button>
 </form>
-<form>
+<form #skillSearchForm="ngForm" (ngSubmit)="submitSkillSearch(skillSearchForm)">
   <label for="field">Search by Field of Expertise</label>
   <input
     type="text"
@@ -22,7 +35,7 @@
   />
   <button>Search</button>
 </form>
-<form>
+<form #expSearchForm="ngForm" (ngSubmit)="submitExpSearch(expSearchForm)">
   <label for="exp">Search by Experience</label>
   <input
     type="text"
@@ -33,3 +46,9 @@
   />
   <button>Search</button>
 </form>
+<div *ngFor="let employee of employees">
+  <h2>{{ employee.name }}</h2>
+  <p>{{ employee.address }}</p>
+  <p>Proficient in - {{ employee.skill }}</p>
+  <p>Experience - {{ employee.exp }} months</p>
+</div>

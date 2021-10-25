@@ -1,5 +1,6 @@
 <h1>Employees</h1>
 <a [routerLink]="['/home']">Home</a>
+<a [routerLink]="['/find-talent']">Search for Employees</a>
 <div *ngFor="let employee of employees">
   <h2>{{ employee.name }}</h2>
   <p>{{ employee.address }}</p>
