@@ -1,54 +1,93 @@
-<h1>Find an Employee</h1>
-<a [routerLink]="['/home']">Home</a>
-<button (click)="getEmployees()">View all Employees</button>
-<button (click)="clearSearch()">Clear Search</button>
-<form #idSearchForm="ngForm" (ngSubmit)="submitIdSearch(idSearchForm)">
-  <label for="id">Search by ID</label>
-  <input
-    type="text"
-    id="id"
-    name="id"
-    placeholder="Enter the Employees ID number"
-    ngModel
-  />
-  <button>Search</button>
-</form>
-<form #nameSearchForm="ngForm" (ngSubmit)="submitNameSearch(nameSearchForm)">
-  <label for="name">Search by Name</label>
-  <input
-    type="text"
-    id="name"
-    name="name"
-    placeholder="Enter the Employees Name"
-    ngModel
-  />
-  <button>Search</button>
-</form>
-<form #skillSearchForm="ngForm" (ngSubmit)="submitSkillSearch(skillSearchForm)">
-  <label for="field">Search by Field of Expertise</label>
-  <input
-    type="text"
-    id="field"
-    name="field"
-    placeholder="Enter the Employees field of expertise"
-    ngModel
-  />
-  <button>Search</button>
-</form>
-<form #expSearchForm="ngForm" (ngSubmit)="submitExpSearch(expSearchForm)">
-  <label for="exp">Search by Experience</label>
-  <input
-    type="text"
-    id="exp"
-    name="exp"
-    placeholder="Enter the Employees Experience in Months"
-    ngModel
-  />
-  <button>Search</button>
-</form>
-<div *ngFor="let employee of employees">
-  <h2>{{ employee.name }}</h2>
-  <p>{{ employee.address }}</p>
-  <p>Proficient in - {{ employee.skill }}</p>
-  <p>Experience - {{ employee.exp }} months</p>
+<div class="container">
+  <div class="header">
+    <h1 class="header-title">Find an Employee</h1>
+    <div class="nav">
+      <a class="nav-link" [routerLink]="['/home']">Home</a>
+      <a class="nav-link" [routerLink]="['/talent-page']">View all Employees</a>
+      <a class="nav-link" [routerLink]="['/add-talent']">Add an Employee</a>
+    </div>
+  </div>
+  <div class="search-container">
+    <div class="search-box">
+      <form
+        class="form"
+        #idSearchForm="ngForm"
+        (ngSubmit)="submitIdSearch(idSearchForm)"
+      >
+        <label class="form-label" for="id">Search by ID</label>
+        <input
+          type="text"
+          id="id"
+          name="id"
+          placeholder="Enter the Employees ID number"
+          ngModel
+        />
+        <button>Search</button>
+      </form>
+    </div>
+    <div class="search-box">
+      <form
+        class="form"
+        #nameSearchForm="ngForm"
+        (ngSubmit)="submitNameSearch(nameSearchForm)"
+      >
+        <label class="form-label" for="name">Search by Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter the Employees Name"
+          ngModel
+        />
+        <button>Search</button>
+      </form>
+    </div>
+    <div class="search-box">
+      <form
+        class="form"
+        #skillSearchForm="ngForm"
+        (ngSubmit)="submitSkillSearch(skillSearchForm)"
+      >
+        <label class="form-label" for="field"
+          >Search by Field of Expertise</label
+        >
+        <input
+          type="text"
+          id="field"
+          name="field"
+          placeholder="Enter the Employees field of expertise"
+          ngModel
+        />
+        <button>Search</button>
+      </form>
+    </div>
+    <div class="search-box">
+      <form
+        class="form"
+        #expSearchForm="ngForm"
+        (ngSubmit)="submitExpSearch(expSearchForm)"
+      >
+        <label class="form-label" for="exp">Search by Experience</label>
+        <input
+          type="text"
+          id="exp"
+          name="exp"
+          placeholder="Enter the Employees Experience in Months"
+          ngModel
+        />
+        <button>Search</button>
+      </form>
+      <div class="search-box">
+        <button (click)="clearSearch()">Clear Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="emp-card" *ngFor="let employee of employees">
+      <h2>{{ employee.name }}</h2>
+      <p>{{ employee.address }}</p>
+      <p>Proficient in - {{ employee.skill }}</p>
+      <p>Experience - {{ employee.exp }} months</p>
+    </div>
+  </div>
 </div>

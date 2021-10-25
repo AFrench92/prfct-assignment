@@ -30,6 +30,7 @@ export class FindTalentComponent implements OnInit {
         this.employees = response;
         console.log(this.employees);
       });
+    form.reset();
   };
 
   submitSkillSearch = (form: NgForm) => {
@@ -40,6 +41,7 @@ export class FindTalentComponent implements OnInit {
         this.employees = response;
         console.log(this.employees);
       });
+    form.reset();
   };
 
   submitExpSearch = (form: NgForm) => {
@@ -50,6 +52,7 @@ export class FindTalentComponent implements OnInit {
         this.employees = response;
         console.log(this.employees);
       });
+    form.reset();
   };
 
   submitNameSearch = (form: NgForm) => {

@@ -3,7 +3,7 @@
   height: 100vh;
 }
 .header {
-  color: red;
+  color: whitesmoke;
   text-align: center;
   padding: 25px;
 }
@@ -23,8 +23,8 @@
   text-decoration: none;
   height: 50px;
   width: 200px;
-  background-color: tomato;
-  color: black;
+  background-color: rgb(139, 29, 29);
+  color: whitesmoke;
   text-align: center;
   padding-top: 10px;
 }

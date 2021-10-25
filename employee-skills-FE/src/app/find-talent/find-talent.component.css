@@ -1,0 +1,73 @@
+.container {
+  background-color: black;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-title {
+  color: whitesmoke;
+  text-align: center;
+  padding: 25px;
+}
+.nav {
+  display: flex;
+  /* width: 25vw; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-link {
+  text-decoration: none;
+  height: 50px;
+  width: 100px;
+  background-color: rgb(139, 29, 29);
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  background-color: rgb(139, 29, 29);
+  width: 300px;
+  margin: auto;
+}
+
+/* .search-box {
+  margin: 30px;
+} */
+.form {
+  /* background-color: rgb(139, 29, 29); */
+  /* width: 300px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  color: whitesmoke;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emp-card {
+  background-color: rgb(139, 29, 29);
+  color: whitesmoke;
+  width: 600px;
+  /* height: max-content; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  /* justify-content: space-around; */
+}

@@ -1,9 +1,20 @@
-<h1>Employees</h1>
-<a [routerLink]="['/home']">Home</a>
-<a [routerLink]="['/find-talent']">Search for Employees</a>
-<div *ngFor="let employee of employees">
-  <h2>{{ employee.name }}</h2>
-  <p>{{ employee.address }}</p>
-  <p>Proficient in - {{ employee.skill }}</p>
-  <p>Experience - {{ employee.exp }} months</p>
+<div class="container">
+  <div class="header">
+    <h1 class="header-title">Employees</h1>
+    <div class="nav">
+      <a class="nav-link" [routerLink]="['/home']">Home</a>
+      <a class="nav-link" [routerLink]="['/add-talent']">Add an Employee</a>
+      <a class="nav-link" [routerLink]="['/find-talent']"
+        >Search for Employees</a
+      >
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="emp-card" *ngFor="let employee of employees">
+      <h2>{{ employee.name }}</h2>
+      <p>{{ employee.address }}</p>
+      <p>Proficient in - {{ employee.skill }}</p>
+      <p>Experience - {{ employee.exp }} months</p>
+    </div>
+  </div>
 </div>

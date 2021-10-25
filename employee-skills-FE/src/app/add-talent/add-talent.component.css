@@ -1,0 +1,65 @@
+.container {
+  background-color: black;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-title {
+  color: whitesmoke;
+  text-align: center;
+  padding: 25px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-link {
+  text-decoration: none;
+  height: 50px;
+  width: 100px;
+  background-color: rgb(139, 29, 29);
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: silver;
+  width: 600px;
+  margin: auto;
+}
+
+.form-entry {
+  background-color: rgb(139, 29, 29);
+  width: 300px;
+  height: 150px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  color: whitesmoke;
+}
+
+.submit {
+  width: 100px;
+  height: 50px;
+  margin-bottom: 20px;
+}
