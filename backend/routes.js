@@ -10,13 +10,6 @@ routes.get("/employees", (req, res) => {
   });
 });
 
-// routes.get("/employees", (req, res) => {
-//   let query = `SELECT * FROM employees`;
-//   pool.query(query).then((response) => {
-//     res.json(response.rows);
-//   });
-// });
-
 routes.get("/employees/skill", (req, res) => {
   let query = `select * from employees where skill = '${req.query.keyword}'`;
   pool.query(query).then((response) => {

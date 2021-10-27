@@ -13,7 +13,6 @@ export class AddTalentComponent implements OnInit {
   ngOnInit(): void {}
 
   submitNewEmployee = (form: NgForm) => {
-    // console.log(form.value);
     this.service.newEmployee(form);
   };
 }
